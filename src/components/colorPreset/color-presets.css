@@ -4,8 +4,7 @@
     height: 100%;
     justify-content: center;
     align-items: center;
-    border-left: 1px solid #dedede;
-    box-sizing: border-box;
+    border-left: 1px solid #d1d3d4;
     cursor: pointer;
     position: relative;
 }
@@ -20,11 +19,12 @@
     position: absolute;
     width: 365%;
     min-height: 100px;
-    background: red;
-    top: 85px;
+    background: #fff;
+    top: 75px;
     right: 0;
     cursor: default;
     flex-direction: column;
+    z-index: 100;
 }
 
 .ColorPreset__dropdown:before {
@@ -32,24 +32,41 @@
     display: block;
     width: 15px;
     height: 15px;
-    background: red;
+    background: #fff;
     right: 20px;
     position: absolute;
     transform: rotate(45deg);
     top: -7px;
+    z-index: 105;
+    border-top: 1px solid #d1d3d4;
+    border-left: 1px solid #d1d3d4;
 }
 
 .ColorPreset__dropdown-item {
     display: flex;
-    background: #dedede;
-    padding: 5px;
     font-size: 20px;
     position: relative;
     height: 40px;
     align-items: center;
+    cursor: pointer;
+    border-top: 1px solid #d1d3d4;
+    color: #9da3a7;
+    z-index: 101;
 }
 
-.ColorPreset__dropdown-item .color-block {
+.ColorPreset__dropdown-item:hover {
+    background: #1c75bc;
+    color: #fff;
+    z-index: 110;
+}
+
+.dropdown-item__block-color {
     position: absolute;
     right: 17px;
+    width: 20px;
+    height: 20px;
+}
+
+.dropdown-item__text {
+    padding-left: 7px;
 }

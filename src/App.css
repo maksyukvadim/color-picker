@@ -2,8 +2,18 @@
     display: flex;
     width: 300px;
     height: 60px;
-    border: 1px solid #dedede;
+    border: 1px solid #d1d3d4;
     text-align: center;
     padding-left: 10px;
     justify-content: center;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

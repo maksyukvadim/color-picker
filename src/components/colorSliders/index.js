@@ -6,7 +6,6 @@ class ColorSliders extends Component {
         return (
             <div className="ColorSliders" >
                 <div className='color-block' style={{background: 'red'}} />
-
             </div>
         );
     }

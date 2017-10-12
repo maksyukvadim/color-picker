@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import InputColorHex from '../components/InputColorHex';
-import ColorPresets from '../components/colorSliders';
-import ColorSliders from '../components/colorPreset';
+import ColorSliders from '../components/colorSliders';
+import ColorPreset from '../components/colorPreset';
 
 class ColorPicker extends Component {
 
@@ -10,13 +10,17 @@ class ColorPicker extends Component {
         openedPresets: false
     };
 
+    onOpenedPresets = (e) => {
+        this.setState({openedPresets: !this.state.openedPresets});
+    };
+
     render() {
         const { openedSliders, openedPresets } = this.state;
         return (
             <div className="ColorPicker">
                 <InputColorHex />
-                <ColorPresets open={openedPresets} />
                 <ColorSliders open={openedSliders} />
+                <ColorPreset onOpen={this.onOpenedPresets} open={openedPresets} />
             </div>
         );
     }
