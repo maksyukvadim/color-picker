@@ -1,0 +1,15 @@
+.ColorSliders {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #dedede;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.color-block {
+    width: 20px;
+    height: 20px;
+}

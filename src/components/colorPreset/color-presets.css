@@ -1,0 +1,55 @@
+.ColorPreset {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #dedede;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+}
+
+.color-block {
+    width: 20px;
+    height: 20px;
+}
+
+.ColorPreset__dropdown {
+    display: flex;
+    position: absolute;
+    width: 365%;
+    min-height: 100px;
+    background: red;
+    top: 85px;
+    right: 0;
+    cursor: default;
+    flex-direction: column;
+}
+
+.ColorPreset__dropdown:before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: red;
+    right: 20px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -7px;
+}
+
+.ColorPreset__dropdown-item {
+    display: flex;
+    background: #dedede;
+    padding: 5px;
+    font-size: 20px;
+    position: relative;
+    height: 40px;
+    align-items: center;
+}
+
+.ColorPreset__dropdown-item .color-block {
+    position: absolute;
+    right: 17px;
+}

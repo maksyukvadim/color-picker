@@ -1,0 +1,9 @@
+.ColorPicker {
+    display: flex;
+    width: 300px;
+    height: 60px;
+    border: 1px solid #dedede;
+    text-align: center;
+    padding-left: 10px;
+    justify-content: center;
+}
