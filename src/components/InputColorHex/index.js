@@ -1,6 +1,12 @@
 import React from 'react';
 import './input-color-hex.css';
 
-const InputColorHex = ({}) => <input className='InputColorHex' maxLength='7' type="text" />;
+const InputColorHex = ({color}) =>
+    <input className='InputColorHex'
+           value={color}
+           maxLength='7'
+           type="text"
+           onChange={() => {}}
+    />;
 
 export default InputColorHex;

@@ -7,20 +7,32 @@ class ColorPicker extends Component {
 
     state = {
         openedSliders: false,
-        openedPresets: false
+        openedPresets: false,
+        activeColor: '#ff0000'
     };
 
-    onOpenedPresets = (e) => {
+    onOpenedPresets = () => {
         this.setState({openedPresets: !this.state.openedPresets});
     };
+    onOpenedSliders = () => {
+        this.setState({openedSliders: !this.state.openedSliders});
+    };
+    onAcceptColor = (color) => this.setState({activeColor: color});
 
     render() {
-        const { openedSliders, openedPresets } = this.state;
+        const { openedSliders, openedPresets, activeColor } = this.state;
         return (
             <div className="ColorPicker">
-                <InputColorHex />
-                <ColorSliders open={openedSliders} />
-                <ColorPreset onOpen={this.onOpenedPresets} open={openedPresets} />
+                <InputColorHex color={activeColor} />
+                <ColorSliders
+                    onOpen={this.onOpenedSliders}
+                    open={openedSliders}
+                    onAccept={this.onAcceptColor}
+                />
+                <ColorPreset
+                    onOpen={this.onOpenedPresets}
+                    open={openedPresets}
+                />
             </div>
         );
     }

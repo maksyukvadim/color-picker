@@ -7,11 +7,13 @@
     border-left: 1px solid #d1d3d4;
     cursor: pointer;
     position: relative;
+    user-select: none;
 }
 
 .color-block {
     width: 20px;
     height: 20px;
+    user-select: none;
 }
 
 .ColorPreset__dropdown {
@@ -25,6 +27,9 @@
     cursor: default;
     flex-direction: column;
     z-index: 100;
+    -webkit-box-shadow: 1px 29px 59px -12px rgba(0,0,0,0.36);
+    -moz-box-shadow: 1px 29px 59px -12px rgba(0,0,0,0.36);
+    box-shadow: 1px 29px 59px -12px rgba(0,0,0,0.36);
 }
 
 .ColorPreset__dropdown:before {
@@ -36,10 +41,8 @@
     right: 20px;
     position: absolute;
     transform: rotate(45deg);
-    top: -7px;
+    top: -8px;
     z-index: 105;
-    border-top: 1px solid #d1d3d4;
-    border-left: 1px solid #d1d3d4;
 }
 
 .ColorPreset__dropdown-item {
@@ -53,6 +56,10 @@
     color: #9da3a7;
     z-index: 101;
 }
+.ColorPreset__dropdown-item:first-child {
+    border-top: none;
+}
+
 
 .ColorPreset__dropdown-item:hover {
     background: #1c75bc;

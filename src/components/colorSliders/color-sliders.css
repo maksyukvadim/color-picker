@@ -1,16 +1,116 @@
 .ColorSliders {
-    display: flex;
     width: 20%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
     border-left: 1px solid #d1d3d4;
     box-sizing: border-box;
     cursor: pointer;
     background: #fff;
+    position: relative;
 }
 
 .color-block {
     width: 20px;
     height: 20px;
+}
+
+.ColorSliders__dropdown {
+    display: flex;
+    position: absolute;
+    width: 400%;
+    height: 130px;
+    min-height: 100px;
+    background: #fff;
+    top: 75px;
+    right: -57px;
+    cursor: default;
+    flex-direction: column;
+    z-index: 100;
+    -webkit-box-shadow: 1px 29px 59px -12px rgba(0,0,0,0.36);
+    -moz-box-shadow: 1px 29px 59px -12px rgba(0,0,0,0.36);
+    box-shadow: 1px 29px 59px -12px rgba(0,0,0,0.36);
+    user-select: none;
+}
+
+.ColorSliders__dropdown:before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    right: 77px;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -9px;
+    z-index: 105;
+    border-top: 1px solid #d1d3d4;
+    border-left: 1px solid #d1d3d4;
+}
+
+.range_group__range {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 2px;
+    background: #d3d3d3;
+    margin-left: 10px;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.range_group__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background: #aeaeb2 ;
+    cursor: pointer;
+}
+
+.range_group__range::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background: #aeaeb2;
+    cursor: pointer;
+}
+
+.range_group__name {
+    display: block;
+    width: 10px;
+    height: 10px;
+    line-height: 2.2em;
+    font-size: 20px;
+    color: #918a8a;
+}
+
+.dropdown__range_group {
+    padding-left: 15px;
+}
+
+.wrap-color-block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.range_group__range_red {
+    background: linear-gradient(to left, red, black);
+}
+
+.range_group__range_green {
+    background: linear-gradient(to left, green, black);
+}
+
+.range_group__range_blue {
+    background: linear-gradient(to left, blue, black);
+}
+
+.button_accept {
+    width: 35px;
+    height: 25px;
 }
