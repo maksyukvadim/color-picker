@@ -24,14 +24,17 @@ class ColorPicker extends Component {
         return (
             <div className="ColorPicker">
                 <InputColorHex color={activeColor} />
+                <div className='wrap-color-block' onClick={this.onOpenedSliders}>
+                    <div className='color-block' style={{backgroundColor: activeColor}}/>
+                </div>
                 <ColorSliders
-                    onOpen={this.onOpenedSliders}
                     open={openedSliders}
                     onAccept={this.onAcceptColor}
                 />
                 <ColorPreset
                     onOpen={this.onOpenedPresets}
                     open={openedPresets}
+                    onActiveColor={this.onAcceptColor}
                 />
             </div>
         );

@@ -24,9 +24,6 @@ class ColorSliders extends Component {
 
         return (
             <div className="ColorSliders">
-                <div className='wrap-color-block' onClick={onOpen}>
-                    <div className='color-block' style={{backgroundColor: `RGB(${red},${green},${blue})`}}/>
-                </div>
                 {open && <div className='ColorSliders__dropdown'>
                     <RangeInput name='R' value={red} color='red' onDrag={this.onHandleDrag} />
                     <RangeInput name='G' value={green} color='green' onDrag={this.onHandleDrag} />
